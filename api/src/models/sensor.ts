@@ -1,21 +1,36 @@
-const {model , Schema} = require('mongoose')
+import {Schema , model} from 'mongoose';
 
 const sensorSchema = new Schema ({
-    title: {
+    name: {
         type:String,
         require: true,
         trim: true
     },
-    description: {
-        type:String,
+    ubication: {
+        type:[Number],
+        require: true,
         trim: true
     },
-    url: {
-        type:String,
+    active: {
+        type:Boolean,
         require: true,
         trim: true,
-        unique: true
+    },
+    minVal: {
+        type: Number,
+        trim: true,
+        require: true,
+        min: -180,
+        max: 180
+    },
+    maxVal: {
+        type:Number,
+        require: true,
+        trim: true,
+        min: -180,
+        max: 180
     }
+
 },{
         versionKey: false,
         timestamps:true
