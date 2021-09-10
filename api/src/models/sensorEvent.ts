@@ -2,7 +2,7 @@ import {Schema , model} from 'mongoose';
 
 const sensorEventSchema = new Schema (
     {
-       sensorId:  {
+       SensorId:  {
             type: Schema.Types.ObjectId,
             ref: 'sensor'
         },

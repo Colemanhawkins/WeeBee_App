@@ -18,11 +18,11 @@ export const createSensorEvent: RequestHandler =  async(req, res) =>{
 
   export const getSensorEvents: RequestHandler = async(req, res) =>{
       try{
-    const sensorEventFound = await SensorEvent.findById(req.params.id)
-    if(!sensorEventFound){
+    const sensorEventsFound = await SensorEvent.find({ SensorId : req.params.id})
+    if(!sensorEventsFound){
       return res.status(204).json({message : 'sensorEvents empty'});
     }
-      return res.json(sensorEventFound)
+      return res.json(sensorEventsFound)
   }catch (err){
     return res.status(404).send(err)
 }
