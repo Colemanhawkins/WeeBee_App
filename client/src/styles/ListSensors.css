@@ -6,16 +6,18 @@
     --secondary-color: rgb(61,68,73);
     --highlight-color: #3282b8;
 
-    --dt-status-available-color: greenyellow;
-    --dt-status-offline-color: rgb(87, 83, 83);
+    --dt-status-active-color: greenyellow;
+    --dt-status-inactive-color: rgb(192, 45, 65);
 
     --dt-padding: 12px;;
     --dt-padding-s: 6px;
     --dt-padding-xs: 2px;
 
     --dt-border-radius: 3px;
+
+    --dt-button-event-color: rgb(172, 22, 159);
     --dt-button-delete-color: rgb(206, 43, 43);
-    --dt-button-update-color: rgb(69, 177, 23);
+    --dt-button-update-color: rgb(173, 175, 36);
 
     --dt-background-color-container: #2a3338;
     --dt-border-color: var(--secondary-color);
@@ -56,10 +58,6 @@
     padding: var(--dt-padding-s) var(--dt-padding);
 }
 
-.button:hover {
-    background: var(--dt-hover-cell-color);
-    color: var(--dt-text-color-active-button)
-}
 
 .button-delete:hover{
     background: var(--dt-button-delete-color);
@@ -69,6 +67,16 @@
 .button-update:hover{
     background:var(--dt-button-update-color);
     color: var(--dt-text-color-active-button)
+}
+
+.button-event{
+    width: 100%;
+}
+
+.button-event:hover{
+    background: var(--dt-button-event-color);
+    color: var(--dt-text-color-active-button);
+    width: 100%;
 }
 
 .datatable {
@@ -100,3 +108,38 @@
     background-color:  var(--dt-hover-cell-color);
 }
 
+.datatable-container .datatable tbody tr .active::after,
+.datatable-container .datatable tbody tr .inactive::after{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.datatable-container .datatable tbody tr .active::after{
+    content: 'Active';
+    color: var(--dt-status-active-color);
+}
+
+.datatable-container .datatable tbody tr .inactive::after{
+    content:  'Inactive';
+    color: var(--dt-status-inactive-color);
+}
+
+
+.datatable-container .datatable tbody tr .active::before,
+.datatable-container .datatable tbody tr .inactive::before{
+    content: '';
+    display: inline-block;
+    width:  10px;
+    height:  10px;
+    margin-right:  10px;
+    border-radius:  50%;
+    vertical-align: middle;
+}
+
+.datatable-container .datatable tbody tr .active::before{
+    background-color: var(--dt-status-active-color);
+}
+
+.datatable-container .datatable tbody tr .inactive::before{
+    background-color: var(--dt-status-inactive-color);
+}

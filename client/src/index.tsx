@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Route } from "react-router-dom";
-import ListSensors from './components/ListSensors';
+import ListSensors from './components/ListSensors/ListSensors';
 
 
 ReactDOM.render(

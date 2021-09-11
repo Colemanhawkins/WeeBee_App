@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+
+
+:root{
+    --terciary-color: rgb(55, 60, 63);
+
+    --dt-input-background-color: var(--terciary-color);
+
+    --dt-button-create-color: rgb(88, 224, 47);
+    --dt-button-clear-color: rgb(89, 90, 28);
+}
+
+.select-status {
+    font-family: 'Noto Sans', sans-serif;
+    width: 100%;
+    height: 100%;
+    color: black;
+    text-align: center;
+}
+
+.select-status::-ms-expand {
+    display: none
+}
+
+.input-name {
+    font-family: 'Noto Sans', sans-serif;
+    width: 50%;
+    height: 100%;
+    color: black;
+    text-align: center;
+}
+
+.input-lng{
+        font-family: 'Noto Sans', sans-serif;
+        width:20%;
+        height: 40%;
+        color: black;
+        text-align: center;
+}
+
+.input-lat{
+    display: inline;
+    text-align: center;
+    font-family: 'Noto Sans', sans-serif;
+    width: 35%;
+    height: 40%;
+    color: black ; 
+}
+
+.div-ubication{
+ display: inline-block;
+}
+
+
+.button-create:hover{
+    background: var(--dt-button-delete-color);
+    color: var(--dt-text-color-active-button)
+}
+
+.button-clear:hover{
+    background: var(--dt-button-delete-color);
+    color: var(--dt-text-color-active-button)
+}
