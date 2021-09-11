@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 
 :root{
     --primary-color: white;
@@ -6,13 +7,15 @@
     --highlight-color: #3282b8;
 
     --dt-status-available-color: greenyellow;
-    --dt-status-offline-color: lightgray;
+    --dt-status-offline-color: rgb(87, 83, 83);
 
     --dt-padding: 12px;;
     --dt-padding-s: 6px;
     --dt-padding-xs: 2px;
 
     --dt-border-radius: 3px;
+    --dt-button-delete-color: rgb(206, 43, 43);
+    --dt-button-update-color: rgb(69, 177, 23);
 
     --dt-background-color-container: #2a3338;
     --dt-border-color: var(--secondary-color);
@@ -26,11 +29,11 @@
     --dt-focus-color: var(--highlight-color);
     --dt-input-background-color: var(--secondary-color);
     --dt-input-color: var(--primary-color);
-
-
 }
 
-
+.material-icons {
+    font-size: 18px;
+}
 .datatable-container {
     font-family: 'Noto Sans', sans-serif;
     background-color: var(--dt-background-color-container);
@@ -38,6 +41,62 @@
     color: var(--dt-text-color);
     width: 75%;
     margin: 0 auto;
-    font-size: 12px;
+    font-size: 1rem;
+}
+
+.button {
+    color: var(--dt-text-color-button);
+    width: 45%;
+    box-sizing: border-box;
+    border: 0;
+    border-radius: var(--dt-border-radius);
+    background: transparent;
+    cursor: pointer;
+    display: inline-block;
+    padding: var(--dt-padding-s) var(--dt-padding);
+}
+
+.button:hover {
+    background: var(--dt-hover-cell-color);
+    color: var(--dt-text-color-active-button)
+}
+
+.button-delete:hover{
+    background: var(--dt-button-delete-color);
+    color: var(--dt-text-color-active-button)
+}
+
+.button-update:hover{
+    background:var(--dt-button-update-color);
+    color: var(--dt-text-color-active-button)
+}
+
+.datatable {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.datatable-container .datatable,
+.datatable-container .datatable th,
+.datatable-container .datatable td{
+    padding: var(--dt-padding) var(--dt-padding);
+    text-align: center;
+}
+
+.datatable-container .datatable th{
+    font-weight: bolder;
+    border-bottom: solid 1px var(--dt-border-color);
+}
+
+.datatable-container .datatable td{
+    border-bottom: solid 1px var(--dt-border-color);
+}
+
+.datatable-container .datatable tbody tr:nth-child(even){
+    background-color: var(--dt-even-row-color);
+}
+
+.datatable-container .datatable tbody tr:hover {
+    background-color:  var(--dt-hover-cell-color);
 }
 
