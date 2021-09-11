@@ -7,9 +7,9 @@ import ListSensors from './components/ListSensors';
 
 ReactDOM.render(
   <React.StrictMode>
-<BrowserRouter>
-<Route path="/" component={ListSensors} />
-</BrowserRouter>
+    <BrowserRouter>
+      <Route path="/" component={ListSensors} />
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );
