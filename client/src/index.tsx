@@ -1,12 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter, Route } from "react-router-dom";
+import ListSensors from './components/ListSensors';
+
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+<BrowserRouter>
+<Route path="/" component={ListSensors} />
+</BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );
