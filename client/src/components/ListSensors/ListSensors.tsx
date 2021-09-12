@@ -1,8 +1,20 @@
-import { FC } from 'react'
+import { FC ,useEffect } from 'react'
 import '../../styles/ListSensors.css'
 import FormSensors from '../FormSensors/FormSensors'
+import * as sensorServices from '../../services/sensorServices'
 
 const ListSensors: FC<HTMLDataListElement>= () => {
+
+
+    const loadSensors = async () => {
+        const res = await sensorServices.getVideos();
+        console.log(res.data)
+    }
+
+    useEffect(() => {
+        loadSensors();
+      }, []);
+
     return (
     <div className='datatable-container'>
         <table className="datatable">
@@ -18,7 +30,7 @@ const ListSensors: FC<HTMLDataListElement>= () => {
                 </tr>
             </thead>
             <tbody>
-            <FormSensors />         
+                <FormSensors />       
                 <tr>
                     <td><span className="active"></span></td>
                     <td>New York</td>

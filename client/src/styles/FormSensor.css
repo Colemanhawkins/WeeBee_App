@@ -53,11 +53,11 @@
 
 
 .button-create:hover{
-    background: var(--dt-button-delete-color);
+    background: var(--dt-button-create-color);
     color: var(--dt-text-color-active-button)
 }
 
 .button-clear:hover{
-    background: var(--dt-button-delete-color);
+    background: var(--dt-button-clear-color);
     color: var(--dt-text-color-active-button)
 }
