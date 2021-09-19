@@ -1,6 +1,5 @@
-import { InitialStateType } from "../../interfaces/interfaces";
-import { Action } from "../../types/types";
-
+import { InitialStateType } from "../interfaces/interfaces"
+import { Action } from "../types/types";
 
 const Reducer = (state: InitialStateType, action: Action): InitialStateType => {
     switch (action.type) {
@@ -14,7 +13,7 @@ const Reducer = (state: InitialStateType, action: Action): InitialStateType => {
             return {
                 ...state,
                 loading: false,
-                sensors: [...state.sensors , action.payload]
+                sensors: action.payload
             };
         }
         case 'ERROR_GET': {

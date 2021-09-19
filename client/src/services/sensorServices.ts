@@ -1,10 +1,10 @@
 import axios from "axios";
-import { Sensor } from "../interfacesAndTypes/interfacesAndTypes";
+import { Sensor } from "../interfaces/interfaces";
 
 const API = "http://localhost:3001";
 
-export const getVideos = async () => {
-  return await axios.get<Sensor[]>(`${API}/sensors`);
+export const getSensors = async () => {
+  return await axios.get(`${API}/sensors`);
 };
 
 export const createNewSensor = async (sensor: Sensor) => {

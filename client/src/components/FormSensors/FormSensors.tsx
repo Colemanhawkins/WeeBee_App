@@ -1,14 +1,21 @@
-import { FormEvent , useState } from 'react'
-import { InputChange, SelectChange, Sensor } from '../../interfacesAndTypes/interfacesAndTypes';
+import { FC, FormEvent , useState } from 'react'
+import { Sensor } from '../../interfaces/interfaces';
 import '../../styles/FormSensor.css';
+import { InputChange, SelectChange } from '../../types/types';
 
-const FormSensors = () => {
+interface Props {
+    event: Function
+}
+const FormSensors : FC<Props> = (props ) => {
 
+    console.log(props);
+     
     const initialState = {
       active: false,
       name: "",
-      lat: "",
-      lng: "",
+      ubication: [],
+      minVal: 0,
+      maxVal: 0,
     };
 
     const [sensor, setSensor] = useState<Sensor>(initialState);
